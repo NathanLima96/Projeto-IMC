@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projeto IMC</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <nav class="header 1p-0 navbar navbar-expand bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand text-light" href="#">Calculadora de IMC</a>
+    </div>
+  </nav>
+
+  <main class="container mt-2 px-0">
+    <div class="imc-header d-flex align-items-center p-3">
+      <p class="me-2 mb-0 fw-bold">IMC</p>
+      <span>Calculo do indice de massa corporal</span>
+    </div>
+    <div class="calculo p-3">
+      <p class="fs-4">Informações do paciente</p>
+      <div class="row">
+        <div class="col">
+          <div class="p-2">
+            <label class="fs-6" for="peso">Peso</label>
+            <input type="number" id="peso">
+          </div>
+          <div class="pb-2">
+            <label class="fs-6" for="altura">Altura</label>
+            <input type="text" id="altura">
+          </div>
+          <div class="m-0 p-0">
+            <input type="radio" name="idade" value="1" id="idoso">
+            <label class="fs-6" for="idoso">Idoso > 65 anos</label>
+          </div>
+          <div>
+            <input type="radio" name="idade" value="0" id="adulto">
+            <label class="fs-6" for="adulto">Adulto <= 65 anos</label>
+          </div>
+          <input class="botao" type="button" value="Calcular" onclick="somar()">
+        </div>
+        <div class="col">
+          <div id="res">
+          </div>
+          <div id="classificacao"></div>
+          <div id="classificacaoidoso"></div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>
